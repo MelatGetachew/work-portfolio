@@ -67,6 +67,21 @@ export default function App() {
             <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-800 rounded-full" />
           </motion.div>
 
+          {/*animation*/}
+          <motion.div
+            className="absolute -top-16 -left-8 bg-red-600 text-white px-5 py-3 rounded-lg border-4 border-blue-800 shadow-lg"
+            initial={{ opacity: 0, rotate: -12, y: 20 }}
+            animate={{ opacity: 1, rotate: -8, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            whileHover={{ rotate: -12, scale: 1.05 }}
+            onHoverStart={() => setCursorHover(true)}
+            onHoverEnd={() => setCursorHover(false)}
+          >
+            <span className="text-2xl font-bold tracking-wide">Animation</span>
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-800 rounded-full" />
+            <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-red-800 rounded-full" />
+          </motion.div>
+
           {/* Year Tag - Creative positioning */}
           <motion.div
             className="absolute top-1/3 -left-20 bg-yellow-400 text-black px-6 py-2 rounded-full font-bold text-xl shadow-lg"
@@ -110,7 +125,7 @@ export default function App() {
             transition={{ delay: 0.6, duration: 0.6 }}
             whileHover={{ scale: 1.08, rotate: 0 }}
           >
-            <span className="text-xl font-bold tracking-wide">alex morgan</span>
+            <span className="text-xl font-bold tracking-wide">Melat Getachew</span>
             <Sparkles className="w-5 h-5 text-yellow-300" fill="currentColor" />
           </motion.div>
 
@@ -163,7 +178,7 @@ export default function App() {
             whileHover={{ y: -5 }}
             style={{ transform: 'rotate(2deg)' }}
           >
-            EST. 2020
+            EST. 2023
           </motion.div>
         </motion.div>
 
