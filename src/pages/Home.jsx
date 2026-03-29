@@ -69,13 +69,13 @@ export default function App() {
 
           {/*animation*/}
           <motion.div
-            className="absolute -top-16 -left-8 bg-red-600 text-white px-5 py-3 rounded-lg border-4 border-blue-800 shadow-lg"
-            initial={{ opacity: 0, rotate: -12, y: 20 }}
-            animate={{ opacity: 1, rotate: -8, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            whileHover={{ rotate: -12, scale: 1.05 }}
-            onHoverStart={() => setCursorHover(true)}
-            onHoverEnd={() => setCursorHover(false)}
+            className="absolute -top-16 right-8 bg-red-600 text-white px-5 py-3 rounded-lg border-4 border-red-800 shadow-lg"
+             initial={{ opacity: 0, rotate: 20, y: 20 }}
+             animate={{ opacity: 1, rotate: 12, y: 0 }}
+             transition={{ delay: 0.3, duration: 0.6 }}
+             whileHover={{ rotate: 18, scale: 1.05 }}
+             onHoverStart={() => setCursorHover(true)}
+             onHoverEnd={() => setCursorHover(false)}
           >
             <span className="text-2xl font-bold tracking-wide">Animation</span>
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-800 rounded-full" />
