@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Sparkles, MousePointer2 } from 'lucide-react';
 
-export default function App() {
+import { Navigation } from "../Components/Navigation";
+export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorHover, setCursorHover] = useState(false);
 
@@ -16,6 +17,7 @@ export default function App() {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-gradient-to-br from-neutral-50 via-blue-50/30 to-yellow-50/20">
+      <Navigation />
       {/* Stylized Grid Background */}
       <div 
         className="absolute inset-0 opacity-[0.15]"
