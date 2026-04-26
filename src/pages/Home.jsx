@@ -34,7 +34,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none" />
 
       {/* Main Content Container */}
-      <div className="relative size-full flex items-center justify-center px-8">
+      <div className="relative size-full flex items-center justify-center px-4 sm:px-8">
         
         {/* Main Portfolio Text */}
         <motion.div 
@@ -44,7 +44,7 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 
-            className="text-[12vw] leading-none tracking-tight select-none"
+            className="text-[10vw] sm:text-[12vw] leading-none tracking-tight select-none"
             style={{ 
               fontWeight: 900,
               color: '#1a1a1a',
@@ -56,7 +56,7 @@ export default function Home() {
 
           {/* UX/UI Label - Top Left, Rotated */}
           <motion.div
-            className="absolute -top-16 -left-8 bg-blue-600 text-white px-5 py-3 rounded-lg border-4 border-blue-800 shadow-lg"
+            className="absolute -top-8 sm:-top-16 -left-4 sm:-left-8 bg-blue-600 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-lg border-2 sm:border-4 border-blue-800 shadow-lg"
             initial={{ opacity: 0, rotate: -12, y: 20 }}
             animate={{ opacity: 1, rotate: -8, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -64,14 +64,14 @@ export default function Home() {
             onHoverStart={() => setCursorHover(true)}
             onHoverEnd={() => setCursorHover(false)}
           >
-            <span className="text-2xl font-bold tracking-wide">UX/UI</span>
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-800 rounded-full" />
-            <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-800 rounded-full" />
+            <span className="text-lg sm:text-2xl font-bold tracking-wide">UX/UI</span>
+            <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-blue-800 rounded-full" />
+            <div className="absolute -bottom-1 -left-1 w-2 h-2 sm:w-3 sm:h-3 bg-blue-800 rounded-full" />
           </motion.div>
 
           {/*animation*/}
           <motion.div
-            className="absolute -top-16 right-8 bg-red-600 text-white px-5 py-3 rounded-lg border-4 border-red-800 shadow-lg"
+            className="absolute -top-8 sm:-top-16 right-4 sm:right-8 bg-red-600 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-lg border-2 sm:border-4 border-red-800 shadow-lg"
              initial={{ opacity: 0, rotate: 20, y: 20 }}
              animate={{ opacity: 1, rotate: 12, y: 0 }}
              transition={{ delay: 0.3, duration: 0.6 }}
@@ -79,9 +79,9 @@ export default function Home() {
              onHoverStart={() => setCursorHover(true)}
              onHoverEnd={() => setCursorHover(false)}
           >
-            <span className="text-2xl font-bold tracking-wide">Animation</span>
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-800 rounded-full" />
-            <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-red-800 rounded-full" />
+            <span className="text-lg sm:text-2xl font-bold tracking-wide">Animation</span>
+            <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-red-800 rounded-full" />
+            <div className="absolute -bottom-1 -left-1 w-2 h-2 sm:w-3 sm:h-3 bg-red-800 rounded-full" />
           </motion.div>
 
           {/* Year Tag - Creative positioning */}
