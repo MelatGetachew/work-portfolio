@@ -8,18 +8,21 @@ const projects = [
     title: "Chronos",
     tag: "Website",
     image: "https://images.unsplash.com/photo-1661246627162-feb0269e0c07",
-  },
+    path: "/work/ui-ux/chronos",
+},
   {
     id: 2,
     title: "Weyrayie",
     tag: "Website",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    path: "/work/ui-ux/weyrayie",
   },
   {
     id: 3,
     title: "SmartPrep",
     tag: "Website",
     image: "https://images.unsplash.com/photo-1658297063569-162817482fb6",
+    path: "/work/ui-ux/smartprep",
   },
    {
     id: 4,
@@ -27,13 +30,15 @@ const projects = [
     tag: "Mobile App",
     image:
       "https://images.unsplash.com/photo-1728598909887-2d983a8889b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc3NDgxNTA0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-  },
+    path: "/work/ui-ux/eva-engineering",
+    },
   {
     id: 5,
     title: "Prestige Addis",
     tag: "website",
     image:
       "https://images.unsplash.com/photo-1741721816781-bab93346b8d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzc0ODkxNDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    path: "/work/ui-ux/prestige-addis",
   },
   {
     id: 6,
@@ -41,6 +46,7 @@ const projects = [
     tag: "website",
     image:
       "https://images.unsplash.com/photo-1601972602288-3be527b4f18a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwZGVsaXZlcnklMjBhcHB8ZW58MXx8fHwxNzc0Nzk3MDI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    path: "/work/ui-ux/environmental-protection-authority",
   },
   {
     id: 7,
@@ -48,13 +54,15 @@ const projects = [
     tag: "Website",
     image:
       "https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwc2hvcHBpbmd8ZW58MXx8fHwxNzc0ODY1NDE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    path: "/work/ui-ux/gfEEP-alumni-digital-network",
   },
   {
     id: 8,
-    title: "EVA ENGINEERING",
+    title: "EVA ENGINEERING2",
     tag: "website",
     image:
       "https://images.unsplash.com/photo-1728598909887-2d983a8889b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc3NDgxNTA0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    path: "/work/ui-ux/eva-engineering-2",
   },
   {
     id: 9,
@@ -62,6 +70,7 @@ const projects = [
     tag: "website",
     image:
       "https://images.unsplash.com/photo-1741721816781-bab93346b8d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzc0ODkxNDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    path: "/work/ui-ux/chronos-dashboard",
   },
   {
     id: 10,
@@ -69,6 +78,7 @@ const projects = [
     tag: "website",
     image:
       "https://images.unsplash.com/photo-1601972602288-3be527b4f18a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwZGVsaXZlcnklMjBhcHB8ZW58MXx8fHwxNzc0Nzk3MDI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    path: "/work/ui-ux/chronos-mobile-app",
   },
 ];
 
@@ -93,7 +103,8 @@ export default function WorkCategory() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {projects.map((project, index) => (
-            <motion.div
+          <Link key={project.id} to={project.path || "#"}>
+           <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -121,6 +132,7 @@ export default function WorkCategory() {
               </div>
 
             </motion.div>
+              </Link>
           ))}
 
         </div>

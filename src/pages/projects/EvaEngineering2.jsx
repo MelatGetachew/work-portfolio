@@ -477,7 +477,7 @@ export default function EvaEngineering() {
             transition={{ duration: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-between gap-4"
           >
-            <Link to="/work/ui-ux/smartprep">
+            <Link to="/work/ui-ux/gfeep-alumni-digital-network">
   <motion.button
     whileHover={{ x: -4 }}
     transition={{ duration: 0.2 }}
@@ -489,14 +489,14 @@ export default function EvaEngineering() {
   </motion.button>
 </Link>
 
-<Link to="/work/ui-ux/prestige-addis">
+<Link to="/work/ui-ux/chronos-dashboard">
   <motion.button
     whileHover={{ x: 4 }}
     transition={{ duration: 0.2 }}
     className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
     style={{ fontWeight: 500 }}
   >
-    Back to Work
+    next Work
     <ArrowRight size={18} />
   </motion.button>
 </Link>
