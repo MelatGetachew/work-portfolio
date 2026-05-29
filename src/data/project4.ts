@@ -1,0 +1,27 @@
+export const project4 = {
+  id: 4,
+  title: "Design System Pro",
+  category: "System Design",
+  year: "2023",
+  description: "Enterprise design system for scale",
+  image: "https://images.unsplash.com/photo-1634084462412-b54873c0a56d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  gradient: "from-orange-500/20 to-red-500/20",
+  challenge: "A growing enterprise with 15+ products lacked design consistency, leading to duplicated efforts and fragmented user experience. Teams worked in silos with different design standards, creating technical debt and slowing development velocity.",
+  solution: "Built a comprehensive design system with 200+ components, design tokens, and clear documentation. Created Figma libraries with auto-layout variants, established governance processes, and developed a component playground for developers.",
+  process: [
+    "Audited existing products to identify common patterns and inconsistencies",
+    "Conducted stakeholder workshops to align on design principles",
+    "Created atomic design structure with tokens, components, and patterns",
+    "Built Figma component library with comprehensive documentation",
+    "Developed React component library with Storybook integration",
+    "Established contribution guidelines and review processes",
+  ],
+  outcome: "Design-to-development handoff time reduced by 65%. Product teams ship features 40% faster with 90% fewer design-related bugs. System adopted across all 15 products with 95% component coverage.",
+  metrics: [
+    { label: "Faster Handoffs", value: "65%" },
+    { label: "Shipping Speed", value: "+40%" },
+    { label: "Design Bugs", value: "-90%" },
+    { label: "Component Coverage", value: "95%" },
+  ],
+  tags: ["Design Systems", "Figma", "React", "Storybook", "Design Tokens"],
+};

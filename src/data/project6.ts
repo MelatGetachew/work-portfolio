@@ -1,0 +1,27 @@
+export const project6 = {
+  id: 6,
+  title: "Travel Booking App",
+  category: "Mobile Design",
+  year: "2023",
+  description: "Seamless travel planning experience",
+  image: "https://images.unsplash.com/photo-1706700392642-dee59f678a09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  gradient: "from-blue-500/20 to-cyan-500/20",
+  challenge: "Travel booking requires managing flights, hotels, and activities across multiple apps, creating a fragmented experience. Users struggle with price comparisons and often abandon bookings due to complexity.",
+  solution: "Designed a unified platform that bundles flights, accommodations, and experiences with AI-powered itinerary suggestions. Implemented augmented reality destination previews and price-freeze features to reduce booking anxiety.",
+  process: [
+    "Conducted user research with frequent travelers and vacationers",
+    "Created journey maps for different traveler personas",
+    "Designed intuitive multi-step booking flows",
+    "Built AR preview features for destinations and hotels",
+    "Implemented flexible payment and price-lock options",
+    "Developed offline mode for travel itinerary access",
+  ],
+  outcome: "Booking completion rate increased by 55%. App achieved 1M+ downloads in first 6 months. Customer satisfaction score reached 4.7/5 with 92% recommendation rate.",
+  metrics: [
+    { label: "Booking Completion", value: "+55%" },
+    { label: "Downloads", value: "1M+" },
+    { label: "Satisfaction Score", value: "4.7/5" },
+    { label: "Recommendation", value: "92%" },
+  ],
+  tags: ["Travel", "Mobile", "AR", "Booking", "Maps"],
+};

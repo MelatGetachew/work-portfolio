@@ -1,0 +1,27 @@
+export const project3 = {
+  id: 3,
+  title: "Fitness Companion",
+  category: "Mobile App",
+  year: "2023",
+  description: "AI-powered health and wellness tracker",
+  image: "https://images.unsplash.com/photo-1695634281254-e94a29d234c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  gradient: "from-green-500/20 to-emerald-500/20",
+  challenge: "Most fitness apps overwhelm users with data without providing actionable insights. Users struggle to maintain motivation and often abandon their fitness goals within weeks. The challenge was to create an engaging experience that adapts to individual fitness levels.",
+  solution: "Designed an AI coach that provides personalized workout plans, real-time form corrections using computer vision, and motivational insights. The app gamifies progress with achievements and social challenges while maintaining privacy through local data processing.",
+  process: [
+    "Researched fitness app user retention patterns and drop-off reasons",
+    "Designed adaptive workout algorithms based on user performance data",
+    "Created motion graphics for exercise demonstrations",
+    "Implemented social features for community motivation",
+    "Developed wearable device integrations for health tracking",
+    "Tested with beta users across different fitness levels",
+  ],
+  outcome: "User retention rate reached 75% after 90 days, compared to industry average of 30%. Users reported 40% improvement in workout consistency and 25% increase in fitness goal achievement.",
+  metrics: [
+    { label: "90-Day Retention", value: "75%" },
+    { label: "Workout Consistency", value: "+40%" },
+    { label: "Goal Achievement", value: "+25%" },
+    { label: "Active Users", value: "500K+" },
+  ],
+  tags: ["Health & Fitness", "AI", "Computer Vision", "Wearables", "Gamification"],
+};

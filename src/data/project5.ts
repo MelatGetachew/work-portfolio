@@ -1,0 +1,27 @@
+export const project5 = {
+  id: 5,
+  title: "Creator Dashboard",
+  category: "Web App",
+  year: "2023",
+  description: "Analytics platform for content creators",
+  image: "https://images.unsplash.com/photo-1702479744181-2d6b58941583?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  gradient: "from-pink-500/20 to-rose-500/20",
+  challenge: "Content creators manage presence across multiple platforms with no unified view of performance. Existing analytics tools are platform-specific and require technical knowledge to interpret, making it difficult for creators to make data-driven decisions.",
+  solution: "Created an all-in-one dashboard aggregating data from YouTube, Instagram, TikTok, and Twitter. Designed simplified visualizations with AI-generated insights, automated reporting, and predictive analytics for content optimization.",
+  process: [
+    "Interviewed 30+ content creators about analytics pain points",
+    "Mapped data structures across different social platforms",
+    "Designed data visualization system for complex metrics",
+    "Built AI model for content performance predictions",
+    "Created customizable dashboard widgets for personalization",
+    "Implemented automated reporting and email digests",
+  ],
+  outcome: "Platform supports 50K+ creators managing $100M+ in revenue. Users save an average of 10 hours per week on analytics. 85% of users report improved content strategy based on platform insights.",
+  metrics: [
+    { label: "Active Creators", value: "50K+" },
+    { label: "Time Saved/Week", value: "10hrs" },
+    { label: "Revenue Managed", value: "$100M+" },
+    { label: "Strategy Improvement", value: "85%" },
+  ],
+  tags: ["Analytics", "Dashboard", "Social Media", "AI Insights", "SaaS"],
+};

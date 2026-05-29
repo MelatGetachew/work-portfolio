@@ -1,0 +1,27 @@
+export const project8 = {
+  id: 8,
+  title: "Productivity Suite",
+  category: "SaaS Product",
+  year: "2022",
+  description: "All-in-one workspace for teams",
+  image: "https://images.unsplash.com/photo-1622790210211-b5c39301578a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  gradient: "from-teal-500/20 to-green-500/20",
+  challenge: "Remote teams use 10+ tools for communication, project management, and collaboration, leading to context switching and information silos. Integration issues cause workflow disruptions and reduce productivity.",
+  solution: "Designed an integrated workspace combining docs, tasks, calendars, and communication with seamless transitions. Implemented real-time collaboration, smart search, and AI-powered meeting summaries.",
+  process: [
+    "Analyzed workflows of 100+ remote teams",
+    "Identified core features needed for team collaboration",
+    "Designed modular interface allowing customization",
+    "Built real-time collaboration engine",
+    "Created AI assistant for meeting notes and task suggestions",
+    "Implemented robust integration with existing tools",
+  ],
+  outcome: "Adopted by 10K+ teams with 250K+ active users. Teams reduced tool count by average 60%. Productivity metrics show 30% increase in task completion rates. Customer NPS score of 72.",
+  metrics: [
+    { label: "Active Users", value: "250K+" },
+    { label: "Tools Reduced", value: "60%" },
+    { label: "Productivity Gain", value: "+30%" },
+    { label: "NPS Score", value: "72" },
+  ],
+  tags: ["Productivity", "Collaboration", "SaaS", "AI", "Remote Work"],
+};

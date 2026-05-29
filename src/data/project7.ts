@@ -1,0 +1,27 @@
+export const project7 = {
+  id: 7,
+  title: "Smart Home Interface",
+  category: "IoT Design",
+  year: "2022",
+  description: "Intuitive control for connected devices",
+  image: "https://images.unsplash.com/photo-1695048132783-4b9f77bde5be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  gradient: "from-indigo-500/20 to-purple-500/20",
+  challenge: "Smart home users juggle multiple apps to control different device brands, creating frustration and limiting adoption. Complex automation requires technical knowledge, preventing average users from fully utilizing their devices.",
+  solution: "Created a unified control center supporting 100+ device brands with natural language commands. Designed visual automation builder with drag-and-drop scenes, voice control integration, and energy usage insights.",
+  process: [
+    "Researched user frustrations with existing smart home systems",
+    "Designed unified device management across brands",
+    "Created visual programming interface for automations",
+    "Built voice assistant integration with natural language",
+    "Implemented energy monitoring and optimization features",
+    "Tested with diverse households for accessibility",
+  ],
+  outcome: "Platform controls 5M+ devices across 200K homes. Automation usage increased by 70%. Energy consumption reduced by average 15% per household. Voice command accuracy reached 95%.",
+  metrics: [
+    { label: "Devices Controlled", value: "5M+" },
+    { label: "Automation Usage", value: "+70%" },
+    { label: "Energy Saved", value: "15%" },
+    { label: "Voice Accuracy", value: "95%" },
+  ],
+  tags: ["IoT", "Smart Home", "Voice UI", "Automation", "Energy"],
+};
