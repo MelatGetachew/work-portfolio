@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Tag, ExternalLink } from "lucide-react";
 import { useNavigate } from "react-router";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 interface CaseStudyData {
   id: number;
@@ -17,6 +17,86 @@ interface CaseStudyData {
   outcome: string;
   metrics: { label: string; value: string }[];
   tags: string[];
+  overviewImages?: string[];
+  sketchImages?: string[];
+  mockupImages?: string[];
+  visualImage?: string;
+}
+
+function GlowImage({ src, alt, gradient, className = "" }: { src: string; alt: string; gradient: string; className?: string }) {
+  return (
+    <div className={`relative flex items-center justify-center ${className}`}>
+      <div className={`absolute bg-gradient-to-b ${gradient} blur-[80px] opacity-50 w-3/4 h-3/4 rounded-full`} />
+      <img
+        src={src}
+        alt={alt}
+        className="relative object-contain drop-shadow-2xl w-full h-full"
+      />
+    </div>
+  );
+}
+
+function ScrollGallery({ images, gradient, itemClassName }: { images: string[]; gradient: string; itemClassName?: string }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: dir === "right" ? 360 : -360, behavior: "smooth" });
+    }
+  };
+
+  if (images.length <= 2) {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {images.map((img, i) => (
+          <GlowImage key={i} src={img} alt={`Image ${i + 1}`} gradient={gradient} className={`min-h-[280px] ${itemClassName ?? ""}`} />
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative group">
+      {/* Left fade */}
+      <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+      {/* Right fade */}
+      <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+
+      {/* Scroll buttons */}
+      <button
+        onClick={() => scroll("left")}
+        className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/10 backdrop-blur border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/20"
+      >
+        <ArrowLeft className="w-4 h-4 text-white" />
+      </button>
+      <button
+        onClick={() => scroll("right")}
+        className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/10 backdrop-blur border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/20"
+      >
+        <ArrowLeft className="w-4 h-4 text-white rotate-180" />
+      </button>
+
+      {/* Scrollable track */}
+      <div
+        ref={scrollRef}
+        className="flex gap-6 overflow-x-auto scroll-smooth pb-4 px-2"
+        style={{ scrollbarWidth: "none" }}
+      >
+        {images.map((img, i) => (
+          <div key={i} className={`flex-shrink-0 w-72 ${itemClassName ?? "min-h-[280px]"}`}>
+            <GlowImage src={img} alt={`Image ${i + 1}`} gradient={gradient} className="w-full h-full min-h-[280px]" />
+          </div>
+        ))}
+      </div>
+
+      {/* Scroll indicator dots */}
+      <div className="flex justify-center gap-1.5 mt-4">
+        {images.map((_, i) => (
+          <div key={i} className="w-1 h-1 rounded-full bg-white/30" />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
@@ -41,11 +121,8 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 lg:px-20 overflow-hidden">
-        {/* Background gradient */}
         <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b ${project.gradient} rounded-full blur-[140px]`} />
-
         <div className="relative max-w-[1200px] mx-auto">
-          {/* Category & Year */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,7 +139,6 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
             </span>
           </motion.div>
 
-          {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +148,6 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
             {project.title}
           </motion.h1>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +157,6 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
             {project.description}
           </motion.p>
 
-          {/* Tags */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,64 +176,43 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
       </section>
 
       {/* Featured Image */}
-      <section className="px-6 lg:px-20 mb-20">
+      <section className="px-6 lg:px-20 mb-24">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-[1200px] mx-auto"
         >
-          <div className="relative overflow-hidden rounded-3xl">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-auto object-cover"
-            />
-          </div>
+          <GlowImage
+            src={project.image}
+            alt={project.title}
+            gradient={project.gradient}
+            className="min-h-[360px] max-h-[600px]"
+          />
         </motion.div>
       </section>
 
       {/* Design Overview */}
-      <section className="px-6 lg:px-20 mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-[1200px] mx-auto"
-        >
-          <h2 className="text-3xl font-bold mb-8">Design Overview</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="relative overflow-hidden rounded-2xl aspect-square">
-              <img
-                src="https://images.unsplash.com/photo-1697292859724-0d2501966448?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                alt="Design detail 1"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl aspect-square">
-              <img
-                src="https://images.unsplash.com/photo-1720962158883-b0f2021fb51e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                alt="Design detail 2"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl aspect-square">
-              <img
-                src="https://images.unsplash.com/photo-1627757818592-ce2649563a6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                alt="Design detail 3"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </motion.div>
-      </section>
+      {project.overviewImages && project.overviewImages.length > 0 && (
+        <section className="px-6 lg:px-20 mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-[1200px] mx-auto"
+          >
+            <h2 className="text-3xl font-bold mb-10">Design Overview</h2>
+            <ScrollGallery images={project.overviewImages} gradient={project.gradient} />
+          </motion.div>
+        </section>
+      )}
 
       {/* Content Sections */}
       <section className="px-6 lg:px-20 pb-32">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
-          {/* Main Content */}
-          <div className="lg:col-span-8 space-y-16">
+          <div className="lg:col-span-8 space-y-20">
+
             {/* Challenge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -168,9 +221,7 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
-              <p className="text-lg text-white/70 leading-relaxed">
-                {project.challenge}
-              </p>
+              <p className="text-lg text-white/70 leading-relaxed">{project.challenge}</p>
             </motion.div>
 
             {/* Solution */}
@@ -181,39 +232,24 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6">The Solution</h2>
-              <p className="text-lg text-white/70 leading-relaxed">
-                {project.solution}
-              </p>
+              <p className="text-lg text-white/70 leading-relaxed">{project.solution}</p>
             </motion.div>
 
-            {/* Wireframes & Sketches */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold mb-6">Early Sketches & Wireframes</h2>
-              <p className="text-lg text-white/70 mb-8 leading-relaxed">
-                The design process began with rapid sketching and low-fidelity wireframes to explore different layout concepts and user flows.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
-                  <img
-                    src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                    alt="Design sketches"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
-                  <img
-                    src="https://images.unsplash.com/photo-1561123760-0b8467594a63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                    alt="Wireframe sketches"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </motion.div>
+            {/* Sketches */}
+            {project.sketchImages && project.sketchImages.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-3xl font-bold mb-4">Early Sketches & Wireframes</h2>
+                <p className="text-lg text-white/70 mb-10 leading-relaxed">
+                  The design process began with rapid sketching and low-fidelity wireframes to explore different layout concepts and user flows.
+                </p>
+                <ScrollGallery images={project.sketchImages} gradient={project.gradient} />
+              </motion.div>
+            )}
 
             {/* Process */}
             <motion.div
@@ -238,59 +274,39 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
               </div>
             </motion.div>
 
-            {/* UI Mockups Gallery */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold mb-6">UI Mockups</h2>
-              <p className="text-lg text-white/70 mb-8 leading-relaxed">
-                High-fidelity mockups showcasing the final interface design across different screens and interactions.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-white/5 backdrop-blur-md border border-white/10 p-8 flex items-center justify-center">
-                  <img
-                    src="https://images.unsplash.com/photo-1695048064952-44b984f2af6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                    alt="Mobile UI mockup"
-                    className="w-auto h-full object-contain"
-                  />
-                </div>
-                <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-white/5 backdrop-blur-md border border-white/10 p-8 flex items-center justify-center">
-                  <img
-                    src="https://images.unsplash.com/photo-1695048132783-4b9f77bde5be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                    alt="Mobile UI screens"
-                    className="w-auto h-full object-contain"
-                  />
-                </div>
-                <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-white/5 backdrop-blur-md border border-white/10 p-8 flex items-center justify-center md:col-span-2">
-                  <img
-                    src="https://images.unsplash.com/photo-1706700392642-dee59f678a09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
-                    alt="Multiple UI screens"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            </motion.div>
+            {/* UI Mockups */}
+            {project.mockupImages && project.mockupImages.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-3xl font-bold mb-4">UI Mockups</h2>
+                <p className="text-lg text-white/70 mb-10 leading-relaxed">
+                  High-fidelity mockups showcasing the final interface design across different screens and interactions.
+                </p>
+                <ScrollGallery images={project.mockupImages} gradient={project.gradient} itemClassName="min-h-[400px]" />
+              </motion.div>
+            )}
 
-            {/* Visual Showcase */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold mb-6">Visual Design</h2>
-              <div className="relative overflow-hidden rounded-2xl aspect-video">
-                <img
-                  src="https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+            {/* Visual Design */}
+            {project.visualImage && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Visual Design</h2>
+                <GlowImage
+                  src={project.visualImage}
                   alt="Visual design showcase"
-                  className="w-full h-full object-cover"
+                  gradient={project.gradient}
+                  className="min-h-[300px] max-h-[500px]"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-20`} />
-              </div>
-            </motion.div>
+              </motion.div>
+            )}
 
             {/* Outcome */}
             <motion.div
@@ -300,16 +316,13 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-bold mb-6">Outcome & Impact</h2>
-              <p className="text-lg text-white/70 leading-relaxed">
-                {project.outcome}
-              </p>
+              <p className="text-lg text-white/70 leading-relaxed">{project.outcome}</p>
             </motion.div>
           </div>
 
           {/* Sidebar */}
           <div className="lg:col-span-4">
             <div className="sticky top-32 space-y-8">
-              {/* Metrics */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -321,16 +334,13 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
                 <div className="space-y-6">
                   {project.metrics.map((metric, index) => (
                     <div key={index}>
-                      <p className="text-3xl font-bold text-blue-400 mb-1">
-                        {metric.value}
-                      </p>
+                      <p className="text-3xl font-bold text-blue-400 mb-1">{metric.value}</p>
                       <p className="text-sm text-white/60">{metric.label}</p>
                     </div>
                   ))}
                 </div>
               </motion.div>
 
-              {/* CTA */}
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

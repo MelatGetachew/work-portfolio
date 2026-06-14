@@ -1,10 +1,18 @@
+import tickpay from "../assets/tickpay-1.png";
+import overview1 from "../assets/tickpay-2.png";
+import overview2 from "../assets/tickpay-2.2.png";
+import overview3 from "../assets/tickpay-3.png";
+import overview4 from "../assets/tickpay-4.png";
+
 export const project1 = {
   id: 1,
   title: "Mobile Banking Revolution",
   category: "Product Design",
   year: "2024",
   description: "Next-gen banking app with AI-powered insights",
-  image: "https://images.unsplash.com/photo-1695048132783-4b9f77bde5be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  image: tickpay,
+  overviewImages: [overview1, overview2, overview3, overview4],
+  
   gradient: "from-blue-500/20 to-cyan-500/20",
   challenge: "Traditional banking apps struggle with complex navigation and lack personalization. Users spend too much time searching for basic features, leading to frustration and app abandonment. The challenge was to create an intuitive interface that anticipates user needs while maintaining security standards.",
   solution: "We developed an AI-powered banking experience that learns from user behavior to surface relevant features. The app uses predictive analytics to suggest actions, implements voice commands for accessibility, and features a clean, card-based interface that prioritizes the most-used functions.",

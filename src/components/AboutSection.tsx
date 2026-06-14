@@ -120,7 +120,7 @@ export default function AboutSection() {
           >
             <h3 className="text-3xl font-bold mb-6">Designer & Storyteller</h3>
             <p className="text-lg text-white/70 leading-relaxed">
-              With over 8 years of experience in product design, I've helped leading tech companies create beautiful, intuitive experiences that users love.
+              With over 2 years of experience in product design, I've helped leading tech companies create beautiful, intuitive experiences that users love.
             </p>
             <p className="text-lg text-white/70 leading-relaxed">
               My approach combines deep user empathy with aesthetic precision, always pushing the boundaries of what's possible in digital design.

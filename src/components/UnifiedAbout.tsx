@@ -1,6 +1,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Award, Code } from "lucide-react";
+import portrait from "../assets/portrait.png";
+
 
 const experiences = [
   {
@@ -207,13 +209,13 @@ export default function UnifiedAbout() {
 
               <div className="relative overflow-hidden rounded-3xl">
                 <img
-                  src="https://images.unsplash.com/photo-1774897795463-e6e4618a4997?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  src={portrait}
                   alt="Professional Portrait"
                   className="w-full h-auto object-cover rounded-3xl"
                   style={{
-                    filter: "contrast(1.08) brightness(0.95)",
-                  }}
-                />
+                   filter: "contrast(1.08) brightness(0.95)",
+                   }}
+                   />
 
                 {/* Gradient overlay for blend */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />

@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
+import tickpay from "../assets/tickpay-1.png";
 
 const projects = [
   {
@@ -8,7 +9,7 @@ const projects = [
     title: "Mobile Banking App",
     category: "Product Design",
     description: "Next-generation banking experience with seamless transactions and smart insights",
-    image: "https://images.unsplash.com/photo-1695048132783-4b9f77bde5be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1aSUyMGRlc2lnbiUyMHByb2plY3QlMjBtb2NrdXB8ZW58MXx8fHwxNzc5OTUyOTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: tickpay,
     gradient: "from-blue-500/20 to-purple-500/20",
   },
   {

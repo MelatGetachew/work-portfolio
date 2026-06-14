@@ -16,7 +16,7 @@ export default function EditorialHero() {
             className="text-[60px] md:text-[80px] lg:text-[100px] xl:text-[120px] font-black tracking-tighter leading-none text-white uppercase"
             style={{ fontFamily: "'Inter Tight', sans-serif", fontWeight: 900 }}
           >
-            DEVANSHU
+            MELAT G
           </motion.h1>
 
           {/* Top-Right: Status & Buttons */}
@@ -39,7 +39,7 @@ export default function EditorialHero() {
 
             {/* Action Buttons */}
             <a
-              href="mailto:hello@devanshu.com?subject=Let's%20Talk%20-%20Project%20Inquiry"
+              href="mailto:hello@MELAT.com?subject=Let's%20Talk%20-%20Project%20Inquiry"
               className="px-6 py-2.5 bg-transparent border border-white/20 text-white text-sm font-medium rounded-full hover:bg-white/5 hover:border-white/30 transition-all inline-block"
             >
               LET'S TALK
