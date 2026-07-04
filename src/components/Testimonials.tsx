@@ -4,28 +4,22 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "VP of Product, Meta",
-    company: "Meta",
-    content: "Alex's design work transformed our AR platform. His attention to detail and user-centric approach helped us achieve a 40% increase in user engagement.",
-    avatar: "SC",
+    name: "Biruk Getachew",
+    role: "General Manager",
+    company: "Bk Technologies",
+    content:
+      "Melat consistently demonstrated exceptional creativity, technical skill, and a strong commitment to delivering user-centered design. She merges creativity with technical insight — a proactive problem solver and fast learner who works exceptionally well under pressure.",
+    avatar: "BG",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
-    name: "Michael Roberts",
-    role: "Design Director, Google",
-    company: "Google",
-    content: "One of the most talented designers I've worked with. Alex combines strategic thinking with beautiful execution. A true asset to any team.",
-    avatar: "MR",
+      name: "Nahom T.",
+    role: "CEO",
+    company: "chronos",
+    content:
+      "Melat brought strong product and UI/UX design skills to our team, taking ownership of several projects from concept through execution. Her ability to lead design work while staying closely tuned to the end user made a real difference in the quality of what we shipped.",
+    avatar: "NT",
     gradient: "from-purple-500 to-pink-500",
-  },
-  {
-    name: "Emily Davis",
-    role: "Head of Design, Airbnb",
-    company: "Airbnb",
-    content: "Alex's redesign of our booking flow exceeded all expectations. Not only did it look stunning, but it also improved our conversion rate by 25%.",
-    avatar: "ED",
-    gradient: "from-orange-500 to-red-500",
   },
 ];
 
@@ -65,7 +59,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
           </div>
           <div>
             <p className="font-semibold text-white">{testimonial.name}</p>
-            <p className="text-sm text-white/50">{testimonial.role}</p>
+            <p className="text-sm text-white/50">{testimonial.role}, {testimonial.company}</p>
           </div>
         </div>
       </div>
@@ -76,6 +70,13 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
 export default function Testimonials() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const gridClass =
+    testimonials.length >= 3
+      ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      : testimonials.length === 2
+      ? "grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto"
+      : "grid grid-cols-1 gap-6 max-w-xl mx-auto";
 
   return (
     <section className="relative py-32 px-6 lg:px-20 overflow-hidden bg-black">
@@ -105,7 +106,7 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Testimonials grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className={gridClass}>
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} index={index} />
           ))}

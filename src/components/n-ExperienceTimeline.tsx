@@ -30,6 +30,20 @@ const experiences = [
     icon:Code,
   },
   {
+    year: "sep 2025 - feb 2026",
+    company: "Pixel Addis Solution",
+    role: "FRONT-END DEVELOPMENT INTERN",
+    description: "Established a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
+    achievements: [
+      "Assisted in developing and maintaining responsive web applications using HTML, CSS, and JavaScript.",
+      "Designed and implemented UI/UX for web and mobile applications.",
+      "Worked with front-end frameworks such as React to build reusable components.",
+      "Tested, debugged, and optimized website performance for different devices and browsers.",
+  
+    ],
+    icon:Code,
+  },
+  {
     year: "Jul 2024 - Nov2024",
     company: "BK technologies",
     role: "UX/UI Designer/Product Designer",

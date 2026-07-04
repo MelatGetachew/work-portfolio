@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope  } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import { FaArrowUpRightFromSquare } from "react-icons/fa6"
 
 export default function PremiumFooter() {
@@ -8,10 +8,9 @@ export default function PremiumFooter() {
   const isInView = useInView(ref, { once: true });  // ← removed margin
 
   const socialLinks = [
-    { icon: FaGithub, label: "GitHub", url: "https://github.com/devanshu" },
-    { icon: FaLinkedin, label: "LinkedIn", url: "https://linkedin.com/in/devanshu" },
-    { icon: FaTwitter, label: "X (Twitter)", url: "https://twitter.com/devanshu" },
-    { icon: FaEnvelope, label: "Email", url: "mailto:hello@devanshu.com" }
+    { icon: FaGithub, label: "GitHub", url: "https://github.com/MelatGetachew" },
+    { icon: FaLinkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/melat-getachew-116b88211/" },
+    { icon: FaEnvelope, label: "Email", url: "mailto:melatgetachew700@gmail.com" }
   ];
 
   return (
@@ -44,13 +43,13 @@ export default function PremiumFooter() {
             </p>
 
             <motion.a
-              href="mailto:hello@devanshu.com"
+              href="mailto:melatgetachew700@gmail.com"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="magnetic group inline-flex items-center gap-3 px-8 py-5 bg-white text-black rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-white/20 transition-all duration-300"
             >
               <FaEnvelope className="w-5 h-5" />
-              hello@devanshu.com
+              melatgetachew700@gmail.com
               <FaArrowUpRightFromSquare className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </motion.a>
           </motion.div>
@@ -125,7 +124,7 @@ export default function PremiumFooter() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-white/40"
         >
-          <p>© 2026 Devanshu. All rights reserved.</p>
+          <p>© 2026 Melat Getachew. All rights reserved.</p>
           <div className="flex items-center gap-8">
             <a href="#" className="hover:text-white/80 transition-colors">
               Privacy

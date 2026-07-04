@@ -7,6 +7,17 @@ import { project6 } from "./project6";
 import { project7 } from "./project7";
 import { project8 } from "./project8";
 
+// Frontend demos
+import { project9 } from "./project9";
+import { project10 } from "./project10";
+import { project11 } from "./project11";
+
+// Animation demos
+import { project12 } from "./project12";
+import { project13 } from "./project13";
+import { project14 } from "./project14";
+import { project15 } from "./project15";
+
 export const projectsData = [
   project1,
   project2,
@@ -16,6 +27,29 @@ export const projectsData = [
   project6,
   project7,
   project8,
+  project9,
+  project10,
+  
+  project12,
+  project13,
+  project14,
+  project15,
 ];
 
-export { project1, project2, project3, project4, project5, project6, project7, project8 };
+export {
+  project1,
+  project2,
+  project3,
+  project4,
+  project5,
+  project6,
+  project7,
+  project8,
+  project9,
+  project10,
+
+  project12,
+  project13,
+  project14,
+  project15,
+};

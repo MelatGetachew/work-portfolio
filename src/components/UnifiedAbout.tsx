@@ -32,6 +32,21 @@ const experiences = [
     icon:Code,
   },
   {
+    year: "sep 2025 - feb 2026",
+    company: "Pixel Addis Solution",
+    role: "Ui/UX Designer and graphic designer",
+    description: "Established a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
+    achievements: [
+      "Established a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
+      "Designed and implemented UI/UX for web and mobile applications.",
+      
+      
+
+  
+    ],
+    icon:Code,
+  },
+  {
     year: "Jul 2024 - Nov2024",
     company: "BK technologies",
     role: "UX/UI Designer/Product Designer",
@@ -66,6 +81,9 @@ const skills = [
   "Visual Design",
   "Motion Design",
   "Interaction Design",
+  "Front End Development",
+  "Figma",
+  "Adobe Creative Suite", 
 ];
 
 function TimelineItem({ experience, index }: { experience: typeof experiences[0]; index: number }) {
@@ -161,7 +179,7 @@ export default function UnifiedAbout() {
           </span>
           <h2 className="text-5xl md:text-6xl font-bold">
             <span className="bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent">
-              Designer & Storyteller
+              Designer & builder
             </span>
           </h2>
         </motion.div>
@@ -186,7 +204,7 @@ export default function UnifiedAbout() {
             <div className="relative p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10">
               <div className="absolute -top-3 -left-3 w-6 h-6 bg-blue-500 rounded-full blur-md" />
               <p className="text-white/60 italic">
-                "Great design is invisible. It should feel so natural that users don't even notice it—they just enjoy the experience."
+                "I think in three layers: how it looks, how it's built, and how it moves. Miss one, and the experience falls apart."
               </p>
             </div>
 
@@ -258,7 +276,7 @@ export default function UnifiedAbout() {
                 </span>
               </h3>
               <p className="text-lg text-white/50 leading-relaxed">
-                Over 8 years designing products for world-class companies and millions of users.
+                Over 3 years designing products for companies and users.
               </p>
             </motion.div>
           </div>

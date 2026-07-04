@@ -8,8 +8,8 @@ const faqs = [
     answer: "My design process follows a user-centered approach. I start with thorough research and discovery to understand user needs, then move into ideation and sketching. From there, I create wireframes and prototypes, test with users, iterate based on feedback, and finally deliver high-fidelity designs with comprehensive documentation.",
   },
   {
-    question: "What tools do you use for design?",
-    answer: "I primarily use Figma for UI/UX design and prototyping, along with Adobe Creative Suite for visual design work. For motion design, I use Principle and After Effects. I'm also proficient in design systems, working with tools like Storybook and utilizing design tokens for scalability.",
+    question: "What tools do you use for UI/UX design?",
+    answer: "I primarily use Figma for UI/UX design, prototyping, and collaboration, along with Adobe Creative Suite for visual and graphic design work.",
   },
   {
     question: "How do you approach user research?",
@@ -18,6 +18,14 @@ const faqs = [
   {
     question: "What's your approach to design systems?",
     answer: "I build design systems with scalability and consistency in mind. I focus on creating reusable components, establishing clear design tokens, and documenting patterns and best practices. This ensures teams can work efficiently while maintaining visual and functional coherence across products.",
+  },
+  {
+    question: "What technologies do you use for front-end development?",
+    answer: "I build with React and Node, translating designs into responsive, accessible interfaces. Working across both design and front-end lets me stay close to how a product actually gets built, not just how it looks on the surface.",
+  },
+  {
+    question: "What software do you use for animation work?",
+    answer: "I use Adobe Animate and Illustrator for motion and character animation, depending on the style and complexity a project calls for.",
   },
   {
     question: "How do you handle design feedback?",
