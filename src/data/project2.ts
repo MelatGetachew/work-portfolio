@@ -1,27 +1,45 @@
+import smartprep from "../assets/smartprep--.png";
+import overview1 from "../assets/smartprep.png";
+import overview2 from "../assets/smartprep(1).png";
+import overview3 from "../assets/smartprep(2).png";
+import overview4 from "../assets/smartprep-.png";
+
 export const project2 = {
   id: 2,
-  title: "E-Commerce Platform",
+  title: "SmartPrep e-Learning Platform",
   category: "UI/UX Design",
-  year: "2024",
-  description: "Modern shopping with personalized AI recommendations",
-  image: "https://images.unsplash.com/photo-1697292859724-0d2501966448?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  year: "2025",
+  description: "an e-learning platform designed to help Ethiopian Grade 12 students prepare for university entrance exams ",
+  image: smartprep,
+  overviewImages: [overview1, overview2, overview3, overview4],
   gradient: "from-purple-500/20 to-pink-500/20",
-  challenge: "Online shoppers face decision paralysis with thousands of products. The existing platform had high bounce rates and low conversion, with users struggling to discover relevant items. The goal was to create a personalized shopping experience that feels curated.",
-  solution: "Built a smart recommendation system that combines collaborative filtering with visual similarity matching. Implemented a clean, Pinterest-inspired layout with infinite scroll, quick-view modals, and one-click purchasing. Added AR try-on features for applicable products.",
-  process: [
-    "Analyzed user behavior data to identify drop-off points in the purchase funnel",
-    "Created a design system with reusable components for scalability",
-    "Developed interactive prototypes for A/B testing different layouts",
-    "Integrated machine learning models for personalized recommendations",
-    "Designed AR try-on experiences for fashion and accessories",
-    "Optimized checkout flow to reduce cart abandonment",
-  ],
-  outcome: "Conversion rates improved by 45%, average order value increased by 28%, and cart abandonment decreased by 32%. The platform now processes over $2M in daily transactions with 98% uptime.",
-  metrics: [
-    { label: "Conversion Rate", value: "+45%" },
-    { label: "Average Order Value", value: "+28%" },
-    { label: "Cart Abandonment", value: "-32%" },
-    { label: "Daily Revenue", value: "$2M+" },
-  ],
-  tags: ["E-Commerce", "AI", "AR/VR", "Web Design", "Mobile"],
+  challenge: "Students preparing for university entrance exams often feel overwhelmed by the amount of study material available and lack clear guidance on what to study next. Existing learning platforms typically provide a one-size-fits-all experience, making it difficult for students to stay engaged, identify their knowledge gaps, and maintain consistent progress. The challenge was to design a simple, intuitive, and personalized learning experience that helps students focus on the right topics, track their improvement, and build confidence throughout their exam preparation journey.",
+ solution:
+  "Designed and developed an AI-powered learning platform that personalizes the exam preparation experience for Ethiopian Grade 12 students. The platform recommends practice questions and study topics based on individual performance, provides instant feedback with detailed explanations, tracks learning progress through intuitive dashboards, and offers adaptive study plans that help students focus on their weakest subjects while maintaining engagement.",
+
+process: [
+  "Optimized onboarding flow to reduce friction from landing page to first practice session",
+  "Mapped the end-to-end learning journey and identified opportunities to simplify navigation and reduce cognitive load",
+  "Designed a scalable design system with reusable UI components for consistency across the platform",
+  "Created interactive prototypes and iterated on the experience through usability testing",
+ "Built progress dashboards, mock exam experiences, and detailed performance analytics to encourage continuous learning",
+],
+
+outcome:
+  "Optimized onboarding flow to reduce friction from landing page to first practice session and redesigned platform delivers a more personalized and engaging learning experience, enabling students to study more efficiently, monitor their progress, and receive targeted recommendations that improve confidence and exam readiness.",
+
+metrics: [
+  { label: "Practice Questions" },
+  { label: "Subjects"},
+  { label: "Recommendations" },
+  { label: "Feedback" },
+],
+
+tags: [
+  "EdTech",
+  "AI",
+  "UX Design",
+  "Product Design",
+  "Learning Analytics",
+]
 };

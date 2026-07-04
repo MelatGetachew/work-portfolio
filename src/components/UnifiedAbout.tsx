@@ -176,7 +176,7 @@ export default function UnifiedAbout() {
             className="lg:col-span-8 space-y-6"
           >
             <p className="text-lg text-white/70 leading-relaxed">
-              With over 8 years of experience in product design, I've helped leading tech companies create beautiful, intuitive experiences that users love.
+              With over 3 years of experience in product design, I've helped leading tech companies create beautiful, intuitive experiences that users love.
             </p>
             <p className="text-lg text-white/70 leading-relaxed">
               My approach combines deep user empathy with aesthetic precision, always pushing the boundaries of what's possible in digital design.

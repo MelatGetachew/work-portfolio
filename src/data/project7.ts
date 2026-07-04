@@ -1,27 +1,51 @@
+import EVA from "../assets/ewcover1.png";
+import overview1 from "../assets/ew.png";
+import overview2 from "../assets/ew1.png";
+import overview3 from "../assets/ew2.png";
 export const project7 = {
   id: 7,
-  title: "Smart Home Interface",
-  category: "IoT Design",
-  year: "2022",
-  description: "Intuitive control for connected devices",
-  image: "https://images.unsplash.com/photo-1695048132783-4b9f77bde5be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-  gradient: "from-indigo-500/20 to-purple-500/20",
-  challenge: "Smart home users juggle multiple apps to control different device brands, creating frustration and limiting adoption. Complex automation requires technical knowledge, preventing average users from fully utilizing their devices.",
-  solution: "Created a unified control center supporting 100+ device brands with natural language commands. Designed visual automation builder with drag-and-drop scenes, voice control integration, and energy usage insights.",
+  title: "EVA ENGINEERING (Website Redesign)",
+  category: "Web Design",
+  year: "2025",
+  description:
+    "Redesigned official website for EVA Engineering to improve material discovery, supplier connections, and deal accessibility in Ethiopia",
+image: EVA,
+overviewImages: [overview1, overview2, overview3],
+
+  gradient: "from-orange-500/20 to-yellow-500/20",
+
+  challenge:
+    "The original EVA Engineering website lacked structure and clarity, making it difficult for users to explore construction materials, understand offerings, and connect with suppliers. Important information was scattered, and users struggled to quickly find relevant products or compare options. The challenge was to redesign the website into a clear, structured, and intuitive experience for material discovery and supplier engagement.",
+
+  solution:
+    "Redesigned the EVA Engineering website as a structured and user-friendly platform for exploring construction materials, connecting with suppliers, and accessing the best deals in Ethiopia. The new experience prioritizes clear categorization, strong visual hierarchy, and simplified navigation, allowing users to quickly browse materials, view supplier information, and make informed decisions with ease.",
+
   process: [
-    "Researched user frustrations with existing smart home systems",
-    "Designed unified device management across brands",
-    "Created visual programming interface for automations",
-    "Built voice assistant integration with natural language",
-    "Implemented energy monitoring and optimization features",
-    "Tested with diverse households for accessibility",
+    "Analyzed existing website structure to identify usability and navigation issues",
+    "Defined improved information architecture for construction materials and supplier listings",
+    "Designed a clean and scalable web layout optimized for browsing and comparison",
+    "Created a category-based system for organizing materials and deals",
+    "Designed supplier discovery flows to improve trust and transparency",
+    "Developed responsive layouts to ensure accessibility across devices",
+    "Iterated on UI clarity to reduce friction in exploration and decision-making",
   ],
-  outcome: "Platform controls 5M+ devices across 200K homes. Automation usage increased by 70%. Energy consumption reduced by average 15% per household. Voice command accuracy reached 95%.",
+
+  outcome:
+    "The redesigned website provides a significantly improved browsing experience, enabling users to easily explore construction materials, discover suppliers, and access deals. It strengthens EVA Engineering’s digital presence and improves usability for both professional and individual buyers.",
+
   metrics: [
-    { label: "Devices Controlled", value: "5M+" },
-    { label: "Automation Usage", value: "+70%" },
-    { label: "Energy Saved", value: "15%" },
-    { label: "Voice Accuracy", value: "95%" },
+    { label: "Core Sections", value: "Materials • Suppliers • Deals" },
+    { label: "Platform Type", value: "Web Redesign" },
+    { label: "Navigation", value: "Simplified & Structured" },
+    { label: "Focus", value: "Clarity & Accessibility" },
   ],
-  tags: ["IoT", "Smart Home", "Voice UI", "Automation", "Energy"],
+
+  tags: [
+    "Web Design",
+    "UX/UI",
+    "Construction Tech",
+    "E-commerce",
+    "Ethiopia",
+    "Product Design",
+  ],
 };
