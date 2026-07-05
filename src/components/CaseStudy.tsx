@@ -341,16 +341,6 @@ export default function CaseStudyPage({ project }: { project: CaseStudyData }) {
                 </div>
               </motion.div>
 
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="w-full px-6 py-4 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                View Live Project
-                <ExternalLink className="w-4 h-4" />
-              </motion.button>
             </div>
           </div>
         </div>

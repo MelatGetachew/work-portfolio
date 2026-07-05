@@ -28,5 +28,6 @@ export const project1 = {
     { label: "Faster Task Completion" },
     { label: "Transaction Growth" },
   ],
+  liveUrl: "https://tatari-one.vercel.app/",
   tags: ["Mobile Design", "AI/ML", "FinTech", "iOS", "Android"],
 };
