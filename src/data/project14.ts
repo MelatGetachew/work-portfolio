@@ -14,5 +14,5 @@ export const project14 = {
   gradient: "from-green-500/20 to-emerald-500/20",
 
 
-  videoUrl: "https://drive.google.com/file/d/PLACEHOLDER_ID_3/view",
+  videoUrl: "https://drive.google.com/file/d/1DwDe21_GpQ9hPhFDS8KLko7yGbnKCwKO/view?usp=sharing",
 };

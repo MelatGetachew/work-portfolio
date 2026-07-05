@@ -13,5 +13,5 @@ export const project12 = {
   image: placeholderImage,
   gradient: "from-pink-500/20 to-rose-500/20",
   
-  videoUrl: "https://drive.google.com/file/d/PLACEHOLDER_ID_1/view",
+  videoUrl: "https://drive.google.com/file/d/1A9FWrfQ52ZVNZloGKRZeGn6epG2VjvGB/view?usp=sharing",
 };

@@ -15,5 +15,5 @@ export const project15 = {
   tags: ["2D Animation", "Character Design"],
 
   // TODO: replace with your real Google Drive share link
-  videoUrl: "https://drive.google.com/file/d/PLACEHOLDER_ID_4/view",
+  videoUrl: "https://drive.google.com/file/d/1RCshYa0W7bWN9Gv3yUxWplUbhoF7Y0NW/view?usp=sharing",
 };

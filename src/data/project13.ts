@@ -14,5 +14,5 @@ export const project13 = {
   gradient: "from-sky-500/20 to-blue-500/20",
   tags: ["Figma", "Prototyping", "Motion Design"],
 
-  videoUrl: "https://drive.google.com/file/d/PLACEHOLDER_ID_2/view",
+  videoUrl: "https://drive.google.com/file/d/1kj9Ggj7sXGH7hljPbfdiV_UMk2QoevFi/view?usp=sharing",
 };
