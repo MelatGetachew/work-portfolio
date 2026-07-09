@@ -45,7 +45,7 @@ export default function EditorialHero() {
               LET'S TALK
             </a>
             <a
-              href="https://drive.google.com/file/d/YOUR_RESUME_ID/view"
+              href="https://drive.google.com/file/d/1UJ1ql-4AElfamic0qUqc70YzRVNrJxFv/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 bg-transparent border border-white/20 text-white text-sm font-medium rounded-full hover:bg-white/5 hover:border-white/30 transition-all inline-block"

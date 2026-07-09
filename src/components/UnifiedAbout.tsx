@@ -35,9 +35,10 @@ const experiences = [
     year: "sep 2025 - feb 2026",
     company: "Pixel Addis Solution",
     role: "Ui/UX Designer and graphic designer",
-    description: "Established a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
     achievements: [
-      "Established a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
+      "Designed and implemented UI/UX for web and mobile applications.",
+      
+      "worked on a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
       "Designed and implemented UI/UX for web and mobile applications.",
       
       
@@ -50,7 +51,6 @@ const experiences = [
     year: "Jul 2024 - Nov2024",
     company: "BK technologies",
     role: "UX/UI Designer/Product Designer",
-    description: "Established a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
     achievements: [
       "Shipped 3 major product features",
       "Improved user satisfaction by 40%",
