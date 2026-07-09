@@ -90,10 +90,9 @@ export default function EditorialHero() {
               className="text-[42px] xl:text-[56px] font-black tracking-tight leading-[0.95] text-white text-right"
               style={{ fontFamily: "'Inter Tight', sans-serif", fontWeight: 900 }}
             >
-              <span className="block">Beyond</span>
-              <span className="block">Visuals.</span>
-              <span className="block">Built with</span>
-              <span className="block">Vision</span>
+              <span className="block">Simplicity </span>
+              <span className="block">Is the </span>
+              <span className="block">Statement</span>
             </h2>
           </motion.div>
         </div>

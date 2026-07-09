@@ -21,7 +21,6 @@ const experiences = [
     year: "Jul 2025 - Oct 2025",
     company: "Kuraztech",
     role: "FRONT-END DEVELOPMENT INTERN",
-    description: "Established a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
     achievements: [
       "Assisted in developing and maintaining responsive web applications using HTML, CSS, and JavaScript.",
       "Designed and implemented UI/UX for web and mobile applications.",
@@ -37,7 +36,6 @@ const experiences = [
     role: "Ui/UX Designer and graphic designer",
     achievements: [
       "Designed and implemented UI/UX for web and mobile applications.",
-      
       "worked on a solid foundation in design principles and techniques, crafting graphics that aligned with company vision.",
       "Designed and implemented UI/UX for web and mobile applications.",
       
